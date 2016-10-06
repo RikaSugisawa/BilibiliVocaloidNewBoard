@@ -8,7 +8,7 @@
 
 
 
-  One is willing to contribute to this project is welcomed to make contact with us, no matter he have an idea of coding or formula-improving or some other things.
+  One who is willing to contribute to this project is welcomed to make contact with us, no matter he has an idea of coding or formula-improving or some other things.
 
   只要你想为这个工程做点什么，无论是提供代码方面的或是公式改良方面的建议或是一些其他的，我们都欢迎你和我们联系。
 
