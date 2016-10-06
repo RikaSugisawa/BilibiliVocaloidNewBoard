@@ -1,4 +1,5 @@
-# BilibiliVocaloidNewBoard
+# [BilibiliVocaloidNewBoard]
+# Bilibili Vocaloid New Orignal Songs Ranking List
 # Bilibili上的VOCALOID新曲排行榜
 
   It can get videos with tag "VOCALOID原创曲" on bilibili.com and rate and sort them. Then it gives a csv file.
