@@ -8,7 +8,7 @@ import os
 if __name__ == '__main__':
 
     # number of videos to be retrieved
-    video_num = 2
+    video_num = 1000
 
     savefolder = os.getcwd() + '/'
 
@@ -26,6 +26,8 @@ if __name__ == '__main__':
     I = 0
     JUDGE = 0
     for i in range(1, 50):  # 遍历50页搜索结果
+        print('Now at page: ' + str(i))
+        f_log.write('Now at page: ' + str(i))
         pg = json.loads(gethtml(i))  # 取得搜索结果
         html = pg['html']
         buf = 0  # 在html中当前搜索位置置零
@@ -57,6 +59,8 @@ if __name__ == '__main__':
                 f_log.write(msg)
                 I += 1
                 if is_30d_ago(RS):
+                    print('30-day limit reached!')
+                    f_log.write('30-day limit reached!')
                     JUDGE = 1
                     del RS[-1]
             except:

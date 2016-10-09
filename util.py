@@ -112,5 +112,5 @@ def getss(nr, RS):  # 获取视频数据
     daySc, totalSc = get_score(view, danmaku, comment, favorite, mTimeStamp)
     RS.append([nr, title, up, daySc, str(int(totalSc)), str(view), str(danmaku), str(comment), str(favorite),
                    str(coin), mtime, str(GetNowTimeTx())])  # 结果写入list
-    time.sleep(1)
+    #time.sleep(1)
     return 0
