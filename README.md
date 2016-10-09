@@ -11,6 +11,7 @@
 
   主程序可以从B站上获取含有“VOCALOID原创曲”标签的视频, 使用新算法进行评分, 并将按分数排序的歌单写入一个csv(逗号分隔)文件.
 
+========================
 
 ####  Instructions for Installation
 
@@ -26,6 +27,7 @@
 
   `pip install -e BilibiliVocaloidNewBoard-master`
 
+-----------------------
 
 ####  安装说明
 
@@ -41,6 +43,7 @@
 
   `pip install -e BilibiliVocaloidNewBoard-master`
 
+========================
 
   One is welcomed to contact us for either collaboratve contributions to this project or comments, suggestions on coding, algorithm improvement or more.
 
