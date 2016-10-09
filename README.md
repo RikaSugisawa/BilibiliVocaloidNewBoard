@@ -1,6 +1,6 @@
 # [BilibiliVocaloidNewBoard]
-# Bilibili Vocaloid New Orignal Songs Ranking List
-# Bilibili上的VOCALOID新曲排行榜
+## Bilibili Vocaloid New Orignal Songs Ranking List
+## Bilibili上的VOCALOID新曲排行榜
 
   BilibiliVocaloidNewBoard is an open-source Python package for acquiring data of recently published original Vocaloid China songs from Bilibili.com and generating a ranking list based on a novel scoring algorithm.
 
@@ -12,7 +12,7 @@
   主程序可以从B站上获取含有“VOCALOID原创曲”标签的视频, 使用新算法进行评分, 并将按分数排序的歌单写入一个csv(逗号分隔)文件.
 
 
-  Instructions for Installation
+####  Instructions for Installation
 
   The package works with Python 3.4 or above. We recommend to get the latest Python 3.5 interpretor from Anaconda (https://www.continuum.io/downloads).
 
@@ -27,7 +27,7 @@
   `pip install -e BilibiliVocaloidNewBoard-master`
 
 
-  安装说明
+####  安装说明
 
   该扩展包需要Python 3.4或以上. 我们建议从Anaconda获取最新的Python 3.5解释器(https://www.continuum.io/downloads).
 
