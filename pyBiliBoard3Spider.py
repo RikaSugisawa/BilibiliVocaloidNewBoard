@@ -1,10 +1,6 @@
 ﻿# -*- coding: utf-8 -*-
-# from __future__ import print_function
 from util import *
-import urllib.request
-# import urllib2
 import json
-import time
 import datetime
 import os
 

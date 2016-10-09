@@ -1,14 +1,9 @@
 # -*- coding: utf-8 -*-
-# from __future__ import print_function
 import urllib.request
-# import urllib2
 import json
 import time
 import datetime
-import os
 
-
-# import numpy as np
 
 
 ###There are only Chinese notes since the author is too lazy to translate them.
