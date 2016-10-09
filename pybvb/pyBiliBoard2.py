@@ -8,7 +8,7 @@ import datetime
 import os
 import numpy as np
 
-raise Warning('This script is obsolete; use pybvb.py instead.')
+raise Warning('This script is obsolete; use main.py instead.')
 
 ###There are only Chinese notes since the author is too lazy to translate them.
 ###After all, there will be few people reading this code.╮(╯▽╰)╭ 
