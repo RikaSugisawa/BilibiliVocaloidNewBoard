@@ -39,19 +39,13 @@ if __name__ == '__main__':
             if (JUDGE > 0):  # 若完成搜索
                 RS = sorted(RS, key=lambda RS: -RS[3], )  # 按单位得分排序
                 for i in range(0, len(RS)):  # 挨个视频
-                    #for j in range(0, 12):  # 挨个数据
-                        #if (j != 3):  # 若不是得分项
+                    RS[i][3] = str(RS[i][3])
                     try:  # 试图写入文件
                         nd.write(','.join(RS[i]))
                     except:  # 写不进去就空着
                         nd.write(',')
-                        ### nr undefined here.
-                        # print('Warning:', nr)
-                        # raise Warning('Data not written.')
                         print('Data not written.', RS[i][0])
                         f_log.write('Data not written: {:s}.\n'.format(RS[i][0]))
-                        #else:  # 若是得分项
-                        #    nd.write(str(int(RS[i][j])) + ',')  # 转成string再写
                     nd.write('\n')  # 写换行
                 nd.write(',统计时间：' + GetNowTimeTx())  # 写入统计(当前)时间
                 nd.close()  # 关闭文件

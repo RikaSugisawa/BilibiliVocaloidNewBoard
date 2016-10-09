@@ -115,7 +115,7 @@ def getss(nr, RS):  # 获取视频数据
     mtime = html[buf1:buf2]
     mTimeStamp = int(time.mktime(time.strptime(mtime, '%Y-%m-%d %H:%M:%S')))  # 投稿日期转为时间戳
     daySc, totalSc = get_score(view, danmaku, comment, favorite, mTimeStamp)
-    RS.append((nr, title, up, daySc, str(int(totalSc)), str(view), str(danmaku), str(comment), str(favorite),
-                   str(coin), mtime, str(GetNowTimeTx())))  # 结果写入list
+    RS.append([nr, title, up, daySc, str(int(totalSc)), str(view), str(danmaku), str(comment), str(favorite),
+                   str(coin), mtime, str(GetNowTimeTx())])  # 结果写入list
     time.sleep(1)
     return 0
