@@ -14,32 +14,32 @@
 
   Instructions for Installation
 
-      The package works with Python 3.4 or above. We recommend to get the latest Python 3.5 interpretor from Anaconda (https://www.continuum.io/downloads).
+  The package works with Python 3.4 or above. We recommend to get the latest Python 3.5 interpretor from Anaconda (https://www.continuum.io/downloads).
 
-      After Python is installed, open https://github.com/RikaSugisawa/BilibiliVocaloidNewBoard in browser, click on [Clone or download], then [Download ZIP].
+  After Python is installed, open https://github.com/RikaSugisawa/BilibiliVocaloidNewBoard in browser, click on [Clone or download], then [Download ZIP].
 
-      Unzip the archive to your local directory. Open CMD (Windows) or Terminal (Linux/MacOS), cd into the directory containing BilibiliVocaloidNewBoard-master, and do
+  Unzip the archive to your local directory. Open CMD (Windows) or Terminal (Linux/MacOS), cd into the directory containing BilibiliVocaloidNewBoard-master, and do
 
-      `pip install BilibiliVocaloidNewBoard-master`
+  `pip install BilibiliVocaloidNewBoard-master`
 
-      You may also use the `-e` flag to make the package editable, i.e.:
+  You may also use the `-e` flag to make the package editable, i.e.:
 
-      `pip install -e BilibiliVocaloidNewBoard-master`
+  `pip install -e BilibiliVocaloidNewBoard-master`
 
 
   安装说明
 
-    该扩展包需要Python 3.4或以上. 我们建议从Anaconda获取最新的Python 3.5解释器(https://www.continuum.io/downloads).
+  该扩展包需要Python 3.4或以上. 我们建议从Anaconda获取最新的Python 3.5解释器(https://www.continuum.io/downloads).
 
-    安装Python后, 在浏览器中打开https://github.com/RikaSugisawa/BilibiliVocaloidNewBoard, 点击[Clone or download], 然后[Download ZIP].
+  安装Python后, 在浏览器中打开https://github.com/RikaSugisawa/BilibiliVocaloidNewBoard, 点击[Clone or download], 然后[Download ZIP].
 
-    将压缩包解压到本地目录. 打开命令提示符(Windows下)或Terminal(Linux或MacOS下), cd进入包含BilibiliVocaloidNewBoard-master文件夹的目录, 执行
+  将压缩包解压到本地目录. 打开命令提示符(Windows下)或Terminal(Linux或MacOS下), cd进入包含BilibiliVocaloidNewBoard-master文件夹的目录, 执行
 
-    `pip install BilibiliVocaloidNewBoard-master`
+  `pip install BilibiliVocaloidNewBoard-master`
 
-    如要实现安装后的实时编辑, 可以使用-e选项, 即:
+  如要实现安装后的实时编辑, 可以使用-e选项, 即:
 
-    `pip install -e BilibiliVocaloidNewBoard-master`
+  `pip install -e BilibiliVocaloidNewBoard-master`
 
 
   One is welcomed to contact us for either collaboratve contributions to this project or comments, suggestions on coding, algorithm improvement or more.
