@@ -8,8 +8,8 @@ import datetime
 
 ###There are only Chinese notes since the author is too lazy to translate them.
 ###After all, there will be few people reading this code.╮(╯▽╰)╭
-def ThirtyDaysAgoInt():  # 取得30天前时间戳
-    return int(time.mktime((datetime.datetime.now() - datetime.timedelta(days=30)).timetuple()))
+def DaysAgoInt(days):  # 取得30天前时间戳
+    return int(time.mktime((datetime.datetime.now() - datetime.timedelta(days=days)).timetuple()))
 
 
 def GetNowTime():  # 取得当前时间戳
@@ -69,10 +69,10 @@ def get_score(view, danmaku, comment, favorite, mTimeStamp):
     return (daySc, totalSc)
 
 
-def is_30d_ago(RS):
+def is_nd_ago(RS, days):
     mtime = RS[-1][-2]
     mTimeStamp = int(time.mktime(time.strptime(mtime, '%Y-%m-%d %H:%M:%S')))  # 投稿日期转为时间戳
-    if (mTimeStamp < ThirtyDaysAgoInt()):  # 如果超过30天就中止
+    if (mTimeStamp < DaysAgoInt(days)):  # 如果超过30天就中止
         return True
     else:
         return False

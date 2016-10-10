@@ -49,7 +49,7 @@
 
   只要你想为这个工程做点什么，无论是提供代码方面的或是公式改良方面的建议或是一些其他的，我们都欢迎你和我们联系。
 
-    Contact us: SinaWeibo @理科P
+    Contact us: SinaWeibo @理科P / @温和的三乙醇胺_TEOA
     联系我们:    QQ        471592823
                 Bilibili  理科P
-                Email     tjj.rikap@gmail.com
+                Email     tjj.rikap@gmail.com / cruiser0631@gmail.com
