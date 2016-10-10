@@ -1,0 +1,32 @@
+package:
+  name: pybvb
+  version: '0.0.0'
+
+source:
+  git_url: https://github.com/RikaSugisawa/BilibiliVocaloidNewBoard.git
+  
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+
+test:
+  # Python imports
+  imports:
+    - pybvb
+
+about:
+  home: https://github.com/RikaSugisawa/BilibiliVocaloidNewBoard
+  license: Apache-2.0
+  summary: 'Automated original Vocaloid ranker in Python.'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
+
