@@ -10,6 +10,8 @@ if __name__ == '__main__':
 
     # number of videos to be retrieved
     video_num = 1000
+    # maximum antedate of publication
+    day_limit = 30
 
     savefolder = os.getcwd() + '/'
 
@@ -61,7 +63,7 @@ if __name__ == '__main__':
                 print(msg)  # 返回成功
                 f_log.write(msg)
                 I += 1
-                if is_30d_ago(RS):
+                if is_nd_ago(RS, day_limit):
                     print('30-day limit reached!\n')
                     f_log.write('30-day limit reached!\n')
                     JUDGE = 1
