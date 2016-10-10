@@ -26,13 +26,16 @@ if __name__ == '__main__':
 
     I = 0
     JUDGE = 0
+
+    search_str = '<a href="http://www.bilibili.com/video/av'
     for i in range(1, 50):  # 遍历50页搜索结果
-        print('Now at page: ' + str(i))
-        f_log.write('Now at page: ' + str(i))
+        pg_msg = 'Now at page: {:d}\n'.format(i)
+        print(pg_msg)
+        f_log.write(pg_msg)
         pg = json.loads(gethtml(i))  # 取得搜索结果
         html = pg['html']
         buf = 0  # 在html中当前搜索位置置零
-        while (html.find('http://www.bilibili.com/video/av', buf + 1) > 0):  # 如果还能找得到视频(请跳至133行)
+        while (html.find(search_str, buf + 1) > 0):  # 如果还能找得到视频(请跳至133行)
             if I == video_num:
                 JUDGE = 1
             if (JUDGE > 0):  # 若完成搜索
@@ -50,9 +53,8 @@ if __name__ == '__main__':
                 nd.close()  # 关闭文件
                 os.system(savefolder + fname_data)  # 打开输出文件
                 exit()  # 结束运行
-            buf = html.find('http://www.bilibili.com/video/av', buf + 1)  # 向后找两次地址避免重复
-            buf = html.find('http://www.bilibili.com/video/av', buf + 1)
-            nr = html[(buf + 32):(buf + 39)]  # 取得av号
+            buf = html.find(search_str, buf + 1)
+            nr = html[(buf + 41):(buf + 48)]  # 取得av号
             try:
                 getss(nr, RS)  # 取得视频信息
                 msg = 'OK: {:s}\n'.format(nr)
@@ -60,8 +62,8 @@ if __name__ == '__main__':
                 f_log.write(msg)
                 I += 1
                 if is_30d_ago(RS):
-                    print('30-day limit reached!')
-                    f_log.write('30-day limit reached!')
+                    print('30-day limit reached!\n')
+                    f_log.write('30-day limit reached!\n')
                     JUDGE = 1
                     del RS[-1]
             except:
