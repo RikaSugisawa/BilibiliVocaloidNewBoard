@@ -141,10 +141,7 @@ if __name__ == '__main__':
                 nd.close()  # 关闭文件
                 os.system('.\\Output.csv')  # 打开输出文件
                 exit()  # 结束运行
-            buf = html.find('<a href="http://www.bilibili.com/video/av', buf + 1)  # 向后找两次地址避免重复
-            print('buf corr 1st', buf)
             buf = html.find('<a href="http://www.bilibili.com/video/av', buf + 1)
-            print('buf corr 2nd', buf)
             nr = html[(buf + 41):(buf + 48)]  # 取得av号
             if (nr.find('href')>-1):
                 continue
