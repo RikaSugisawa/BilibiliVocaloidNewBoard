@@ -8,6 +8,11 @@ import datetime
 import os
 import numpy as np
 
+
+############################################################
+#   NOTE: This script is obsolete; use main.py instead.    #
+############################################################
+
 raise Warning('This script is obsolete; use main.py instead.')
 
 ###There are only Chinese notes since the author is too lazy to translate them.
