@@ -20,6 +20,10 @@ def GetNowTimeTx():  # 取得当前时间文本
     return datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
 
+def GetNowDateTx():  # 取得当前日期文本
+    return datetime.datetime.now().strftime('%Y-%m-%d')
+
+
 def req(url):  # 携带UA请求文本
     # Construct header dict.
     headers = {}
