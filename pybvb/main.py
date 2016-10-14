@@ -65,7 +65,7 @@ if __name__ == '__main__':
                     nd.write('\n')  # 写换行
                 nd.write(',统计时间：' + GetNowTimeTx())  # 写入统计(当前)时间
                 nd.close()  # 关闭文件
-                os.system(savefolder + fname_data)  # 打开输出文件
+                #os.system(savefolder + fname_data)  # 打开输出文件
                 exit()  # 结束运行
             buf = html.find(search_str, buf + 1)
             nr = html[(buf + 41):(buf + 48)]  # 取得av号
