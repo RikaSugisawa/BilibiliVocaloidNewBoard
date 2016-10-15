@@ -1,6 +1,7 @@
 from pybvb.util import *
 import datetime
 import time, os
+from sys import platform
 
 
 def timer(timepoints):
@@ -14,6 +15,7 @@ autolog = open('automator_log.txt', 'w+', encoding='utf-8')
 
 
 if __name__ == '__main__':
+
     while(True):
         timepoints = [[4, 0], [10, 0], [16, 0], [22, 0]]
         if timer(timepoints):
