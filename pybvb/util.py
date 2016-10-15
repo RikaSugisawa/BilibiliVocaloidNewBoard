@@ -93,14 +93,28 @@ def getss(nr, RS):  # 获取视频数据
         Number of videos to be retrieved.
     '''
     global JUDGE  # 是否完成请求的标志
-    js = json.loads(req(
-        'http://api.bilibili.com/archive_stat/stat?callback=jQuery17202070728806148786_1475647238270&aid=' + nr + '&type=text&_=1475647238378'))
+    retry = 0
+    while(True):
+        try:
+            js = json.loads(req(
+                'http://api.bilibili.com/archive_stat/stat?callback=jQuery17202070728806148786_1475647238270&aid=' + nr + '&type=text&_=1475647238378'))
+            break
+        except Exception as e:
+            retry += 1
+            if retry == 3: raise e
     view = js['data']['view']  # 获取播放、收藏、硬币、弹幕数据
     favorite = js['data']['favorite']
     coin = js['data']['coin']
     danmaku = js['data']['danmaku']
-    js = json.loads(req(
-        'http://api.bilibili.com/x/reply?callback=jQuery172021295901065111744_1475652382382&jsonp=text&type=1&sort=2&oid=' + nr + '&pn=1&nohot=1&_=1475652382486'))
+    retry = 0
+    while(True):
+        try:
+            js = json.loads(req(
+                'http://api.bilibili.com/x/reply?callback=jQuery172021295901065111744_1475652382382&jsonp=text&type=1&sort=2&oid=' + nr + '&pn=1&nohot=1&_=1475652382486'))
+            break
+        except Exception as e:
+            retry += 1
+            if retry == 3: raise e
     comment = js['data']['page']['count']  # 获取评论数据
     html = req('http://www.bilibili.com/mobile/video/av' + nr + '.html')
     buf1 = html.find('UP主:') + 5  # 获取UP主数据

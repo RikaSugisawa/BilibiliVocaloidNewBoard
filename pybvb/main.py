@@ -36,8 +36,8 @@ if __name__ == '__main__':
             pg_msg = 'Now at page: {:d}\n'.format(i)
             print(pg_msg)
             f_log.write(pg_msg)
-            pg = json.loads(gethtml(i))  # 取得搜索结果
             try:
+                pg = json.loads(gethtml(i))  # 取得搜索结果
                 html = pg['html']
                 break
             except:
@@ -80,7 +80,8 @@ if __name__ == '__main__':
                     f_log.write('30-day limit reached!\n')
                     JUDGE = 1
                     del RS[-1]
-            except:
+            except Exception as e:
+                print(e)
                 msg = 'Warning: {:s}\n'.format(nr)
                 print(msg)  # 报错并跳过
                 f_log.write(msg)

@@ -14,13 +14,15 @@ autolog = open('automator_log.txt', 'w+', encoding='utf-8')
 
 
 if __name__ == '__main__':
-
     while(True):
         timepoints = [[4, 0], [10, 0], [16, 0], [22, 0]]
         if timer(timepoints):
             try:
-                import main
+                os.system('python main.py')
+                print('Successfully executed spider: {:s}\n'.format(GetNowTimeTx()))
                 autolog.write('Successfully executed spider: {:s}\n'.format(GetNowTimeTx()))
-            except:
+            except Exception as e:
+                print(e)
                 autolog.write('Encountered error when executing spider: {:s}\n'.format(GetNowTimeTx()))
-        time.sleep(30)
+                print('Encountered error when executing spider: {:s}\n'.format(GetNowTimeTx()))
+        time.sleep(60)
