@@ -3,14 +3,11 @@ import urllib.request
 import json
 import time
 import datetime
-from sys import platform
+import os
 
 
-def get_separator():
-    if 'win' in platform:
-        return '\\'
-    else:
-        return  '/'
+def pwd():
+    return os.getcwd().replace('\\', '/')
 
 
 ###There are only Chinese notes since the author is too lazy to translate them.

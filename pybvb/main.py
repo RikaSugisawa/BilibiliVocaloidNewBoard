@@ -13,9 +13,7 @@ if __name__ == '__main__':
     # maximum antedate of publication
     day_limit = 9999
 
-    sep = get_separator()
-
-    savefolder = '{:s}{:s}{:s}{:s}'.format(os.getcwd(), sep, GetNowDateTx(), sep)
+    savefolder = '{:s}/{:s}/'.format(pwd(), GetNowDateTx())
 
     if not os.path.exists(savefolder):
         os.mkdir(savefolder)
