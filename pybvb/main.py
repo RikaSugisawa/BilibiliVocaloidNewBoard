@@ -13,19 +13,19 @@ if __name__ == '__main__':
     # maximum antedate of publication
     day_limit = 9999
 
-    savefolder = os.getcwd() + '/{:s}/'.format(GetNowDateTx())
+    savefolder = '{:s}/{:s}/'.format(pwd(), GetNowDateTx().replace(':', '-'))
 
     if not os.path.exists(savefolder):
         os.mkdir(savefolder)
 
 
-    fname_data = 'data_' + GetNowTimeTx() + '.csv'
+    fname_data = 'data_' + GetNowTimeTx().replace(':', '-') + '.csv'
     nd = open(savefolder + fname_data, 'w+', encoding='utf-8')
     nd.write('AV号,标题,UP主,单位得分,总得分,播放,弹幕,评论,收藏,硬币,投稿时间,统计时间\n')
     global RS  # 用于接受结果的list
     RS = []
     # create log file
-    fname_log = 'log_' + GetNowTimeTx() + '.csv'
+    fname_log = 'log_' + GetNowTimeTx().replace(':', '-') + '.csv'
     f_log = open(savefolder + fname_log, 'w+', encoding='utf-8')
     I = 0
     JUDGE = 0
@@ -36,8 +36,8 @@ if __name__ == '__main__':
             pg_msg = 'Now at page: {:d}\n'.format(i)
             print(pg_msg)
             f_log.write(pg_msg)
-            pg = json.loads(gethtml(i))  # 取得搜索结果
             try:
+                pg = json.loads(gethtml(i))  # 取得搜索结果
                 html = pg['html']
                 break
             except:
@@ -65,7 +65,7 @@ if __name__ == '__main__':
                     nd.write('\n')  # 写换行
                 nd.write(',统计时间：' + GetNowTimeTx())  # 写入统计(当前)时间
                 nd.close()  # 关闭文件
-                os.system(savefolder + fname_data)  # 打开输出文件
+                #os.system(savefolder + fname_data)  # 打开输出文件
                 exit()  # 结束运行
             buf = html.find(search_str, buf + 1)
             nr = html[(buf + 41):(buf + 48)]  # 取得av号
@@ -80,7 +80,8 @@ if __name__ == '__main__':
                     f_log.write('30-day limit reached!\n')
                     JUDGE = 1
                     del RS[-1]
-            except:
+            except Exception as e:
+                print(e)
                 msg = 'Warning: {:s}\n'.format(nr)
                 print(msg)  # 报错并跳过
                 f_log.write(msg)
