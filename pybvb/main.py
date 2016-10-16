@@ -13,19 +13,19 @@ if __name__ == '__main__':
     # maximum antedate of publication
     day_limit = 9999
 
-    savefolder = '{:s}/{:s}/'.format(pwd(), GetNowDateTx())
+    savefolder = '{:s}/{:s}/'.format(pwd(), GetNowDateTx().replace(':', '-'))
 
     if not os.path.exists(savefolder):
         os.mkdir(savefolder)
 
 
-    fname_data = 'data_' + GetNowTimeTx() + '.csv'
+    fname_data = 'data_' + GetNowTimeTx().replace(':', '-') + '.csv'
     nd = open(savefolder + fname_data, 'w+', encoding='utf-8')
     nd.write('AV号,标题,UP主,单位得分,总得分,播放,弹幕,评论,收藏,硬币,投稿时间,统计时间\n')
     global RS  # 用于接受结果的list
     RS = []
     # create log file
-    fname_log = 'log_' + GetNowTimeTx() + '.csv'
+    fname_log = 'log_' + GetNowTimeTx().replace(':', '-') + '.csv'
     f_log = open(savefolder + fname_log, 'w+', encoding='utf-8')
     I = 0
     JUDGE = 0
