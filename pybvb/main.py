@@ -11,7 +11,7 @@ if __name__ == '__main__':
     # number of videos to be retrieved
     video_num = 1000
     # maximum antedate of publication
-    day_limit = 9999
+    day_limit = 30
 
     savefolder = '{:s}/{:s}/'.format(pwd(), GetNowDateTx().replace(':', '-'))
 
