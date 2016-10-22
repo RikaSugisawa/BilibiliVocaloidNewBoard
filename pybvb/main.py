@@ -6,18 +6,13 @@ import datetime
 import os
 
 
-if __name__ == '__main__':
+def crawl_data(video_num=1000, day_limit=30, timeout=None):
 
-    # number of videos to be retrieved
-    video_num = 1000
-    # maximum antedate of publication
-    day_limit = 30
-
+    t0 = time.time()
     savefolder = '{:s}/{:s}/'.format(pwd(), GetNowDateTx().replace(':', '-'))
 
     if not os.path.exists(savefolder):
         os.mkdir(savefolder)
-
 
     fname_data = 'data_' + GetNowTimeTx().replace(':', '-') + '.csv'
     nd = open(savefolder + fname_data, 'w+', encoding='utf-8')
@@ -52,6 +47,9 @@ if __name__ == '__main__':
         while (html.find(search_str, buf + 1) > -1):  # 如果还能找得到视频(请跳至133行)
             if I >= video_num:
                 JUDGE = 1
+            if timeout is not None:
+                if time.time() - t0 > timeout:
+                    JUDGE = 1
             if (JUDGE > 0):  # 若完成搜索
                 RS = sorted(RS, key=lambda RS: -RS[3], )  # 按单位得分排序
                 for i in range(0, len(RS)):  # 挨个视频
@@ -86,10 +84,16 @@ if __name__ == '__main__':
                 print(msg)  # 报错并跳过
                 f_log.write(msg)
                 continue
-                # Coded by:      RikaSugisawa
-                # GitHub:        https://github.com/RikaSugisawa/BilibiliVocaloidNewBoard
-                #                @RikaSugisawa @mdw771
-                # SinaWeibo:     @理科P @温和的三乙醇胺_TEOA
-                # QQ:            471592823
-                # Email:         tjj.rikap@gmail.com
-                # Bilibili:      理科P
+
+
+if __name__ == '__main__':
+
+    crawl_data(video_num=3000, day_limit=30, timeout=14400)
+
+# Coded by:      RikaSugisawa
+# GitHub:        https://github.com/RikaSugisawa/BilibiliVocaloidNewBoard
+#                @RikaSugisawa @mdw771
+# SinaWeibo:     @理科P @温和的三乙醇胺_TEOA
+# QQ:            471592823
+# Email:         tjj.rikap@gmail.com
+# Bilibili:      理科P
