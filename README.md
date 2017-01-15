@@ -1,7 +1,8 @@
 # [BilibiliVocaloidNewBoard]
 ## Bilibili Vocaloid New Orignal Songs Ranking List
 ## Bilibili上的VOCALOID新曲排行榜
-
+<h3><span style="color:#FF0000">鉴于B站搜索服务api修改，请使用最新更改的`\Dev\main.py`文件</span></h3>
+<h3><span style="color:#FF0000">As the searching service api has been revised, the most recent file `\Dev\main.py` is recommended</span></h3>
   BilibiliVocaloidNewBoard is an open-source Python package for acquiring data of recently published original Vocaloid China songs from Bilibili.com and generating a ranking list based on a novel scoring algorithm.
 
   BilibiliVocaloidNewBoard是一个用于从哔哩哔哩获取新发布的Vocaloid中文原创曲信息并使用新算法生成排行榜单的开源Python扩展包.
